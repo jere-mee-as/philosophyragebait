@@ -121,6 +121,10 @@ header,.who-top{transition:opacity .32s cubic-bezier(.4,0,.6,1),filter .32s}
 
 .credit{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted);z-index:5}
 .credit b{font-weight:500;color:var(--soft)}
+.more{position:fixed;left:max(18px,env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));font-size:12.5px;line-height:20px;color:var(--muted);z-index:5;margin:0;padding:0}
+.more a{color:var(--soft);font-weight:500;text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--rage) 55%,transparent);text-decoration-thickness:1.5px;text-underline-offset:3px;transition:color .2s,text-decoration-color .2s}
+.more a:hover{color:var(--ink);text-decoration-color:var(--rage)}
+.more a:focus-visible{outline:1.5px solid var(--ink);outline-offset:3px;border-radius:3px}
 button:focus-visible{outline:1.5px solid var(--ink);outline-offset:2px}
 .search:focus-visible{outline:none;border-bottom-color:var(--muted)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
@@ -134,7 +138,7 @@ button:focus-visible{outline:1.5px solid var(--ink);outline-offset:2px}
   .chip{font-size:16px;padding:5px 8px}
   .group h2{padding-left:8px}
   .trigger .n{font-size:23px}
-  .credit{position:static;justify-content:flex-end;margin:56px auto 0;max-width:560px}
+  .base{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin:64px auto 0;max-width:540px}.credit,.more{position:static;flex:none}.more{flex:1;min-width:0;line-height:1.65;text-wrap:balance}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.group{opacity:1;transform:none}}
 </style>
@@ -188,7 +192,7 @@ button:focus-visible{outline:1.5px solid var(--ink);outline-offset:2px}
   </section>
 </div>
 
-<div class="credit" id="credit">made by <b>Jere</b></div>
+<footer class="base"><p class="more">Want rage bait for <a href="https://jere-mee-as.github.io/philosophyragebait/">particular philosophies</a>? How about for <a href="https://jere-mee-as.github.io/ragebait/">anything</a>?</p><div class="credit" id="credit">made by <b>Jere</b></div></footer>
 
 <!-- One entry per target: n = name, g = group (groups show in the order they first appear), a = the lines. -->
 <script id="data" type="application/json">__DATA__</script>
